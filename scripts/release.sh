@@ -19,7 +19,7 @@ export IMAGE="$LOGIN/inventory@$DIGEST"
 export KUBECONFIG; KUBECONFIG=$(mktemp); trap 'rm -f "$KUBECONFIG"' EXIT
 az aks get-credentials -g "$RESOURCE_GROUP" -n "$AKS" --file "$KUBECONFIG"
 kubelogin convert-kubeconfig -l azurecli
-kubectl get namespace portfolio >/dev/null 2>&1 || kubectl apply -f k8s/namespace.yaml
+kubectl -n portfolio get serviceaccount default >/dev/null 2>&1 || kubectl apply -f k8s/namespace.yaml
 envsubst '$IMAGE' < k8s/app.yaml | kubectl apply -f -
 kubectl apply -f k8s/network-policy.yaml
 kubectl -n portfolio rollout status deployment/inventory --timeout=300s

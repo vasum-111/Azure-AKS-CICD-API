@@ -2,7 +2,7 @@
 
 ## Checked locally
 
-- Node.js 24 test suite: catalog lookup, readiness failure, price tampering, duplicate-order retries, conflicting retries, invalid quantities, malformed/oversized payloads, and source-file exposure.
+- Node.js 24 test suite: catalog lookup, readiness failure, rejection of write operations, security headers, and source-file exposure.
 - Every Bicep file compiled with Microsoft Bicep CLI 0.47.16.
 - Dependency lockfile generated; no credentials are included.
 
@@ -19,3 +19,7 @@ The Validate workflow runs tests, compiles Bicep and checks shell syntax, then b
 - End-to-end cloud smoke tests, billing review and teardown.
 
 No Azure live endpoint, latency benchmark, availability result or cost saving is claimed without deployment evidence.
+
+## Public preview smoke test
+
+Verified on September 21, 2026: HTTPS preview loads with its explicit deployment-status notice. The API explorer returned sample catalog data.
