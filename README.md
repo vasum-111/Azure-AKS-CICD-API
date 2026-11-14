@@ -5,7 +5,7 @@
 
 A deliberately small API that demonstrates the full path from a tested commit to an observable Kubernetes workload.
 
-**[Open browser preview](https://vasum-111.github.io/azure-aks-cicd-api/)** · **[Deployment guide](DEPLOYMENT.md)** · **[Operations & tradeoffs](OPERATIONS.md)**
+**[Open browser preview](https://vasum-111.github.io/Azure-AKS-CICD-API/)** · **[Deployment guide](DEPLOYMENT.md)** · **[Operations & tradeoffs](OPERATIONS.md)**
 
 > **Deployment status:** the public browser preview is static hosting on GitHub Pages. It uses sample data and does not call an Azure backend. Azure resources have **not** been provisioned; cloud deployment awaits subscription access and cost approval. Bicep compilation and local tests are validation, not evidence of a successful Azure deployment.
 
